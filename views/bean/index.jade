@@ -1,0 +1,37 @@
+extends ./../layout
+
+
+block body
+  
+  table
+    tr
+      td name
+      td place
+      td breed
+      td manor
+      td method
+      td roastDate
+      td roastType
+      td flavour
+      td lat
+      td lon
+      td coverUrl
+      td thumbCoverUrl
+      
+    each bean in beans
+      tr
+        td= bean.name
+        td= bean.place
+        td= bean.breed
+        td= bean.manor
+        td= bean.method
+        td= bean.roastDate
+        td= bean.roastType
+        td= bean.flavour
+        td= bean.lat
+        td= bean.lon
+        td= bean.coverUrl
+        td= bean.thumbCoverUrl
+    
+
+    
