@@ -8,7 +8,8 @@ in each of your models.
 For more info on Sails models, see:
 http://sailsjs.org/#/documentation/concepts/ORM
 ###
-module.exports.models = {}
+module.exports.models =
+  migrate: 'drop'
 
 ###*
 Your app's default connection. i.e. the name of one of your app's        *
@@ -23,5 +24,3 @@ tables/collections/etc. in your schema.                                  *
 
 See http://sailsjs.org/#/documentation/concepts/ORM/model-settings.html  *
 ###
-
-# migrate: 'alter'

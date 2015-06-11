@@ -1,0 +1,39 @@
+extends ./../layout
+
+block body
+  if (errors)
+    each error in errors
+      include ./../common/warning
+
+
+  main.register(role="main")
+    .row
+      .col-md-6.social-register
+        h1 快速註冊
+      .col-md-6.site-register
+        h1 ZURU 帳號註冊
+        form(role='form', action='/auth/local/register', method='post')
+          .form-horizontal
+            .form-group
+              .col-md-6.col-md-offset-3
+                input#identifier.form-control(type='email', name='email', placeholder='輸入 E-mail', required)
+            .form-group
+              .col-md-6.col-md-offset-3
+                input#password.form-control(type='password', name='password', placeholder='密碼', required)
+            .form-group
+              .col-md-6.col-md-offset-3
+                input#password_chk.form-control(type='password', name='password_chk', placeholder='密碼', required)
+            .form-group
+              .col-md-6.col-md-offset-3
+                input#username.form-control(type='text', name='username', placeholder='帳號', required)
+            .form-group
+              .checkbox
+                input(type='checkbox', name='agree', required)
+                茲同意本網站之
+                a(href="") 網站使用條款
+            .form-group
+              button.btn.btn-default(type='submit') 立即註冊
+    hr.divider
+    .row(style='text-align:center')
+      已經是會員？
+      a(href="/login") 立即登入

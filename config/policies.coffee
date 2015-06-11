@@ -15,7 +15,13 @@ http://sailsjs.org/#/documentation/concepts/Policies
 For more information on configuring policies, check out:
 http://sailsjs.org/#/documentation/reference/sails.config/sails.config.policies.html
 ###
-module.exports.policies = {}
+module.exports.policies =
+  '*': [ 'passport']
+ #  '*': ['passport', 'sessionAuth'],
+ #
+ # 'auth': {
+ #    '*': ['passport']
+ #  }
 
 ###*
 Default policy for all controllers and actions (`true` allows public     *

@@ -1,0 +1,12 @@
+extends ./../layout
+
+
+block body
+  p wellcome
+  
+  if (user)
+    P #{user.email}
+  else 
+    a(href="/auth/login" role="button") login
+
+  
