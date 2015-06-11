@@ -1,0 +1,56 @@
+########################
+# sails
+########################
+.sails
+.waterline
+.rigging
+.tmp
+
+
+########################
+# node.js / npm
+########################
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+node_modules
+
+npm-debug.log
+
+
+########################
+# misc / editors
+########################
+*~
+*#
+.DS_STORE
+.netbeans
+nbproject
+.idea
+
+
+########################
+# local config
+########################
+.sass-cache
+.DS_Store
+/config/local.coffee
+gulpfile.js
+dump.rdb
+
+bower_components
+assets/bower/
+trm.compile.js
+test/e2e/screenshots/
+
+coffeelint.json
