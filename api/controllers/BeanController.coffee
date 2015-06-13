@@ -3,11 +3,22 @@ BeanController = {
 
 
     Bean.find().then((beans) ->
-      res.view(beans: beans)
+      return res.view(beans: beans)
     )
 
 
+  delete: (req, res)->
 
+    deleteBeanId = req.params["id"]
+
+    Bean.destroy(deleteBeanId).then((result)->
+
+      return res.ok(success: true)
+
+    ).fail((error)->
+
+      return res.serverError(success: false)
+    )
 
 }
 
